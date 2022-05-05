@@ -1,0 +1,158 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: sans-serif;
+  background: var(--primary-background);
+  user-select: none;
+  text-decoration: none;
+  transition: background-color .25s linear;
+  -webkit-transition: background-color .25s linear;
+}
+
+html.primary:root {
+  --primary-background: #dde1e7;
+  --keypad-color: hsl(0, 0%, 0%);
+  --primary-toggle-background: #cacaca;
+  --primary-screen-key-shadow: inset -5px -5px 12px #ffffff73, 
+	inset 5px 5px 12px rgba(94, 104, 121, .288);
+  --primary-key-shadow: -5px -5px 12px #ffffff73, 
+                            5px 5px 12px rgba(32, 41, 56, 0.288);
+  --footer-primary-color: blue;
+}
+
+.secondary:root {
+  --secondary-background: hsl(281, 89%, 26%);
+  --keypad-color: #fff;
+  --secondary-toggle-background: hsl(285, 91%, 52%);
+  --secondary-screen-key-shadow: inset -5px -5px 12px #ffffff73, 
+								 inset 5px 5px 12px rgba(94, 104, 121, .288);
+  --footer-secondary-color: blue;
+  --secondary-key-shadow: -5px -5px 12px hsl(285, 91%, 52%),
+						   5px 5px 12px hsl(290, 70%, 36%);
+}
+
+.dark:root {
+  --dark-background: #000;
+  --keypad-color: #fff;
+  --dark-toggle-background: #333;
+  --dark-screen-key-shadow: inset -5px -5px 12px #ffffff73, 
+	inset 5px 5px 12px rgba(94, 104, 121, .288);
+  --dark-key-shadow: -5px -5px 12px #ffffff73, 
+							5px 5px 12px rgba(32, 41, 56, 0.288);
+  --footer-dark-color: blue;
+}
+
+main .wraper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .wraper .calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 68px);
+  background: inherit;
+  padding: 15px;
+  border-radius: 13px;
+  position: relative;
+  box-shadow: var(--primary-key-shadow);
+}
+
+main .wraper input[type="text"] {
+  border-radius: 13px;
+  height: 70px;
+  grid-column: span 4;
+  width: 260px;
+  background: inherit;
+  text-align: end;
+  font-size: 2rem;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  box-shadow: var(--primary-screen-key-shadow);
+}
+
+main .wraper button {
+  height: 55px;
+  width: 55px;
+  background: inherit;
+  box-shadow: var(--primary-key-shadow);
+  margin: 10px;
+  font-size: 1.5rem;
+  border-radius: 13px;
+}
+
+main .wraper button:active {
+  box-shadow: var(--primary-screen-key-shadow);
+}
+
+main .wraper .equal {
+  width: 115px;
+}
+
+main .wraper .theme-switcher {
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  font-size: 11px;
+  gap: 1.5em;
+  right: 10%;
+  top: 3%;
+  transform: translate(5%, -10%);
+  position: absolute;
+}
+
+main .wraper .theme-switcher > span {
+  text-transform: uppercase;
+}
+
+main .wraper .selector {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.25em;
+}
+
+main .wraper .selector > * {
+  width: 53px;
+}
+
+main .wraper .selector > .label {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2px;
+}
+
+main .wraper #themeSwitcher {
+  --track-padding: 4px;
+  --thumb-size: 1em;
+  background: var(--primary-toggle-background);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: var(--track-padding);
+  border-radius: 100em;
+  height: calc(var(--thumb-size) + (var(--track-padding) * 2));
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+  font-size: 12px;
+  width: 100%;
+  z-index: 1;
+  height: 35px;
+  border-top: solid var(--toggle-background);
+}
+
+footer a {
+  color: var(--footer-primary-color);
+}

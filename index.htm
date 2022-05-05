@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>calculator</title>
+</head>
+<body>
+    <main>
+        <div class="wraper">
+            <div class="calculator">
+
+                <div class="theme-switcher">
+					<span>Theme</span>
+
+					<div class="selector">
+						<span class="label">
+							<span>1</span>
+							<span>2</span> 
+							<span>3</span> 
+						</span>
+						<input
+							aria-label="Theme switcher"
+							id="themeSwitcher"
+							type="range"
+							min="1"
+							max="3"
+							value="1"
+                            onclick="themeSwitch()"
+						/>
+					</div>
+				</div>
+
+                <input 
+                type="text" 
+                name="display-screen" 
+                id="screen-display"
+                placeholder="0"
+                disabled
+                />
+        
+                <button onclick="clr()">AC</button>
+                <button onclick="del()">DEL</button>
+                <button onclick="display('%')">%</button>
+                <button onclick="display('/')">/</button>
+                <button onclick="display('7')">7</button>
+                <button onclick="display('8')">8</button>
+                <button onclick="display('9')">9</button>
+                <button onclick="display('*')">*</button>
+                <button onclick="display('4')">4</button>
+                <button onclick="display('5')">5</button>
+                <button onclick="display('6')">6</button>
+                <button onclick="display('-')">-</button>
+                <button onclick="display('1')">1</button>
+                <button onclick="display('2')">2</button>
+                <button onclick="display('3')">3</button>
+                <button onclick="display('&plus;')">&plus;</button>
+                <button onclick="display('.')">.</button>
+                <button onclick="display('0')">0</button>
+                <button onclick="calculate()" class="equal">&equals;</button>
+            </div>
+        </div>
+        <script src="./js/index.js" defer></script>
+        <script src="./js/theme.js" defer></script>
+    </main>
+
+    <footer class="attribution">
+        <p> 
+            Design by&nbsp;     
+                <a
+                    rel="noreferrer noopener" 
+                    href="http://www.instagram.com/codeauthor_" target="_blank">
+                    <p>Alfred Joseph</p>
+                </a>
+        </p>
+    </footer>
+
+</body>
+</html>

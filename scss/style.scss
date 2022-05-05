@@ -1,0 +1,132 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: sans-serif;
+    background: var(--primary-background);
+    user-select: none;
+    text-decoration: none;
+    transition: background-color .25s linear;
+    -webkit-transition: background-color .25s linear;
+}
+
+@import 'variable';
+
+main .wraper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .calculator{
+        display: grid;
+        grid-template-columns: repeat(4, 68px);
+        background: inherit;
+        padding: 15px;
+        border-radius: 13px;
+        position: relative;
+        box-shadow: var(--primary-key-shadow);      
+    }
+
+    input[type="text"]{
+        border-radius: 13px;
+        height: 70px;
+        grid-column: span 4;
+        width: 260px;
+        background: inherit;
+        text-align: end;
+        font-size: 2rem;
+        margin: auto;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        box-shadow: var(--primary-screen-key-shadow);
+    }            
+
+    button{
+        height: 55px;
+        width: 55px;
+        background: inherit;
+        box-shadow: var(--primary-key-shadow);
+        margin: 10px;
+        font-size: 1.5rem;
+        border-radius: 13px;
+
+
+        &:active{
+            box-shadow: var(--primary-screen-key-shadow);
+        }
+
+    }  
+
+    .equal{
+        width: 115px;
+    }
+
+    .theme-switcher {
+        display: flex;
+        align-items: flex-end;
+        justify-content: start;
+        font-size: 11px;
+        gap: 1.5em;
+        right: 10%;
+        top: 3%;
+        transform: translate(5%, -10%);
+        position: absolute;
+    }
+    
+    .theme-switcher > span {
+        text-transform: uppercase;
+    }
+    
+    .selector {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 0.25em;
+    }
+    
+    .selector > * {
+        width: 53px;
+    }
+    
+    .selector > .label {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 2px;
+    }
+    
+    #themeSwitcher {
+        --track-padding: 4px;
+        --thumb-size: 1em;
+        
+        background: var(--primary-toggle-background);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: var(--track-padding);
+        border-radius: 100em;
+        height: calc(var(--thumb-size) + (var(--track-padding) * 2));
+    }
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    font-size: 12px;
+    width: 100%;
+    z-index: 1;
+	height: 35px;
+    border-top: solid  var(--toggle-background);
+
+    a{
+        color: var(--footer-primary-color);
+    }
+}

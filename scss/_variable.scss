@@ -1,0 +1,34 @@
+html.primary:root{
+
+	--primary-background: #dde1e7;
+	--keypad-color: hsl(0, 0%, 0%);
+	--primary-toggle-background: #cacaca;
+	--primary-screen-key-shadow: inset -5px -5px 12px #ffffff73, 
+	inset 5px 5px 12px rgba(94, 104, 121, .288);
+	--primary-key-shadow: -5px -5px 12px #ffffff73, 
+                            5px 5px 12px rgba(32, 41, 56, 0.288);
+    --footer-primary-color: blue;
+}
+
+.secondary:root{
+	--secondary-background: hsl(281, 89%, 26%);
+	--keypad-color: #fff;
+	--secondary-toggle-background: hsl(285, 91%, 52%);
+	--secondary-screen-key-shadow: inset -5px -5px 12px #ffffff73, 
+								 inset 5px 5px 12px rgba(94, 104, 121, .288);
+	--footer-secondary-color: blue;
+	--secondary-key-shadow: -5px -5px 12px hsl(285, 91%, 52%),
+						   5px 5px 12px hsl(290, 70%, 36%);
+}
+
+.dark:root{
+	--dark-background: #000;
+	--keypad-color: #fff;
+	--dark-toggle-background: #333;
+	--dark-screen-key-shadow: inset -5px -5px 12px #ffffff73, 
+	inset 5px 5px 12px rgba(94, 104, 121, .288);
+	--dark-key-shadow: -5px -5px 12px #ffffff73, 
+							5px 5px 12px rgba(32, 41, 56, 0.288);
+	--footer-dark-color: blue;
+
+}
